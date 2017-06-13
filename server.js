@@ -15,7 +15,7 @@ app.get('/htmlpage', function(req,res){
 
 
 app.get('/art-one', function(req,res){
-    res.send('first article will be procieded by the server');
+    res.sendFile(path.join(__dirname, 'ui', 'art-one.html'));
 });
 
 app.get('/art-two', function(req,res){

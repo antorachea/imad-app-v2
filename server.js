@@ -19,7 +19,11 @@ app.get('/art-one', function(req,res){
 });
 
 app.get('/art-two', function(req,res){
-   res.send('second article will be served here'); 
+    res.sendFile(path.join(__dirname, 'ui', 'art-two.html'));
+});
+
+app.get('/art-three', function(req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'art-three.html'));
 });
 
 app.get('/art-three', function(req,res){

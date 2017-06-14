@@ -5,9 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var artOne = {
-    title: 'Article one - from server js',
+var Articles = {
+artOne: {
+    title: 'Article one Anto',
     sar: 'Article one',
     date: 'Jun 14, 2017',
     content: `  <p>
@@ -25,6 +25,47 @@ var artOne = {
             </p>
     `
     
+},
+artTwo: {
+    title: 'Article two Anto',
+    sar: 'Article two',
+    date: 'Jun 14, 2017',
+    content: `  <p>
+            Paragraph 1:
+            This is the content for my second article. This is the content for my first article. This is the content for my first article
+            </p>
+            
+            <p>
+            Paragraph 2:
+                This isthe second paragraph
+            </p>
+            <p>
+                Paragraph 3:
+                This is the third paragraph
+            </p>
+    `
+    
+},
+artThree: {
+    title: 'Article 3 Anto',
+    sar: 'Article one',
+    date: 'Jun 14, 2017',
+    content: `  <p>
+            Paragraph 1:
+            This is the content for my third article. This is the content for my first article. This is the content for my first article
+            </p>
+            
+            <p>
+            Paragraph 2:
+                This isthe second paragraph
+            </p>
+            <p>
+                Paragraph 3:
+                This is the third paragraph
+            </p>
+    `
+    
+}
 };
 function createTempalate(data){
     var date=data.date;
@@ -71,16 +112,13 @@ app.get('/', function (req, res) {
 app.get('/htmlpage', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'htmlpage.html'));
 });
-
+app.get('/:articleName', function(req,res){
+   // articleName == article name
+   var articleName = req.param.articleName;
+   res.send(createTempalate(Articles[articleName]));
+});
 app.get('/art-one', function(req,res){
    res.send(createTempalate(artOne)); 
-});
-app.get('/art-two', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'art-two.html'));
-});
-
-app.get('/art-three', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'art-three.html'));
 });
 
 app.get('/art-three', function(req,res){

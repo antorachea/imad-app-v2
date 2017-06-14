@@ -28,7 +28,7 @@ var artOne={
 function createTemplate (data){
 var title=data.title;
 var date=data.date;
-var Heading=data.heading;
+var heading=data.Heading;
 var content=data.content;
 
 var htmlTemplate='
@@ -47,7 +47,7 @@ var htmlTemplate='
         </div>
         <hr/>
         <h3>
-            ${Heading}
+            ${heading}
         </h3>
         <div>
             ${date}
@@ -75,7 +75,7 @@ app.get('/htmlpage', function(req,res){
 
 
 app.get('/art-one', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'art-one.html'));
+    res.send(createTemplate(artOne)));
 });
 
 app.get('/art-two', function(req,res){

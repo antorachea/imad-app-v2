@@ -90,9 +90,9 @@ var htmlTemp= `
         <h3>
             ${head}
         </h3>
-        <div>
-            ${date}
-        </div>
+       // <div>
+       //        ${date}
+      //  </div>
         
         <div>
             ${content}

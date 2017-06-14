@@ -70,7 +70,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/artOne', function (req, res){
+app.get('/artOn1e', function (req, res){
    // artName == article name
 
    res.send(createTempalate(articleone));

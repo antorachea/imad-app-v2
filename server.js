@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var Articles = {
+var articles = {
 'artOne': {
     title: 'Article one Anto',
     sar: 'Article one',
@@ -113,7 +113,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName', function(req,res){
    // artName == article name
    var articleName = req.param.articleName;
-   res.send(createTempalate(Articles[articleName]));
+   res.send(createTempalate(articles[articleName]));
 });
 
 

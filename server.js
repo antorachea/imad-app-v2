@@ -6,6 +6,64 @@ var app = express();
 app.use(morgan('combined'));
 
 
+var artOne = {
+    title: 'Artcle one - from server js',
+    heading: 'Article one',
+    date: 'Jun 14, 2017',
+    content: `  <p>
+            Paragraph 1:
+            This is the content for my first article. This is the content for my first article. This is the content for my first article
+            </p>
+            
+            <p>
+            Paragraph 2:
+                This isthe second paragraph
+            </p>
+            <p>
+                Paragraph 3:
+                This is the third paragraph
+            </p>
+    `
+    
+};
+function createTempalate(data){
+    var date=data.date;
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    
+var htmlTemp= `
+<html>
+    <head>
+        <title>${title}</title>    
+<meta name='viewport' content='width-device-width, initial-scale=1' >
+<link href="/ui/style.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <div class='stylecontainer'>
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <hr/>
+        <h3>
+            ${date}
+        </h3>
+        <div>
+            ${date}
+        </div>
+        
+        <div>
+            ${content}
+        </div>
+        </div>
+    </body>
+</html>
+`;
+return htmlTemp;
+
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -14,7 +72,9 @@ app.get('/htmlpage', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'htmlpage.html'));
 });
 
-
+app.get('/art-one', function(req,res){
+   res.send(createTemplate(artOne)); 
+});
 app.get('/art-two', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'art-two.html'));
 });

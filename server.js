@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-'article-one': {
+
+var articleone = {
     title: 'Article one Anto',
     sar: 'Article one',
     date: 'Jun 14, 2017',
@@ -25,48 +25,8 @@ var articles = {
             </p>
     `
     
-},
-'article-two': {
-    title: 'Article two Anto',
-    sar: 'Article two',
-  date: 'Jun 14, 2017',
-    content: `  <p>
-            Paragraph 1:
-            This is the content for my second article. This is the content for my first article. This is the content for my first article
-            </p>
-            
-            <p>
-            Paragraph 2:
-                This isthe second paragraph
-            </p>
-            <p>
-                Paragraph 3:
-                This is the third paragraph
-            </p>
-    `
-    
-},
-'article-three': {
-    title: 'Article 3 Anto',
-    sar: 'Article Three',
-   date: 'Jun 14, 2017',
-    content: `  <p>
-            Paragraph 1:
-            This is the content for my third article. This is the content for my first article. This is the content for my first article
-            </p>
-            
-            <p>
-            Paragraph 2:
-                This isthe second paragraph
-            </p>
-            <p>
-                Paragraph 3:
-                This is the third paragraph
-            </p>
-    `
-    
-}
 };
+
 function createTempalate(data){
     var date=data.date;
     var title=data.title;
@@ -110,10 +70,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function (req, res){
+app.get('/articleName', function (req, res){
    // artName == article name
-   var articleName = req.param.articleName;
-   res.send(createTempalate(articles[articleName]));
+
+   res.send(createTempalate(articleone));
 });
 
 

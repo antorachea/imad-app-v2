@@ -48,7 +48,7 @@ var Articles = {
 },
 'artThree': {
     title: 'Article 3 Anto',
-    sar: 'Article one',
+    sar: 'Article Three',
     date: 'Jun 14, 2017',
     content: `  <p>
             Paragraph 1:
@@ -112,10 +112,10 @@ app.get('/', function (req, res) {
 app.get('/htmlpage', function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'htmlpage.html'));
 });
-app.get('/:articleName', function(req,res){
-   // articleName == article name
-   var articleName = req.param.articleName;
-   res.send(createTempalate(Articles[articleName]));
+app.get('/:artName', function(req,res){
+   // artName == article name
+   var artName = req.param.artName;
+   res.send(createTempalate(Articles[artName]));
 });
 
 

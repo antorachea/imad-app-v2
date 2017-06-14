@@ -4,9 +4,10 @@ var path = require('path');
  
 var app = express();
 app.use(morgan('combined'));
+
 var artOne={
-    title: "Anto - Article one Serverjs",
-    heading: "Article One",
+    title: 'Anto - Article one Serverjs',
+    heading: 'Article One',
     date: '14 jun 1983',
     content:  `
     <p>

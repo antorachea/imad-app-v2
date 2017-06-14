@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleone = {
+var arts = {
+articleone: {
     title: 'Article one Anto',
     sar: 'Article one',
     date: 'Jun 14, 2017',
@@ -25,7 +25,28 @@ var articleone = {
             </p>
     `
     
-};
+},
+articletwo: {
+    title: 'Article two Anto',
+    sar: 'Article one',
+    date: 'Jun 15, 2017',
+    content: `  <p>
+            Paragraph 1:
+            This is the content for my second article. This is the content for my first article. This is the content for my first article
+            </p>
+            
+            <p>
+            Paragraph 2:
+                This isthe second paragraph
+            </p>
+            <p>
+                Paragraph 3:
+                This is the third paragraph
+            </p>
+    `
+    
+},
+}
 
 function createTempalate(data){
     var date=data.date;
@@ -76,6 +97,11 @@ app.get('/artName', function (req, res){
    res.send(createTempalate(articleone));
 });
 
+app.get('/artNames', function (req, res){
+   // artName == article name
+artNames=req.param.artNames
+   res.send(createTempalate(arts[artNames]));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));

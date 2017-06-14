@@ -110,8 +110,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/htmlpage', function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'htmlpage.html'));
 });
 app.get('/:artName', function(req,res){
    // artName == article name

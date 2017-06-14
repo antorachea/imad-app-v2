@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
 var artOne = {
     title: 'Artcle one - from server js',
-    heading: 'Article one',
+    sar: 'Article one',
     date: 'Jun 14, 2017',
     content: `  <p>
             Paragraph 1:
@@ -29,7 +29,7 @@ var artOne = {
 function createTempalate(data){
     var date=data.date;
     var title=data.title;
-    var heading=data.heading;
+    var head=data.sar;
     var content=data.content;
     
 var htmlTemp= `
@@ -47,7 +47,7 @@ var htmlTemp= `
         </div>
         <hr/>
         <h3>
-            ${date}
+            ${head}
         </h3>
         <div>
             ${date}

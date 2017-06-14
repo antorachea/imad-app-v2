@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 var artOne={
     title: "Anto - Article one Serverjs",
-    Heading: "Article One",
+    heading: "Article One",
     date: '14 jun 1983',
     content:  `
     <p>
@@ -28,7 +28,7 @@ var artOne={
 function createTemplate (data){
 var title=data.title;
 var date=data.date;
-var heading=data.Heading;
+var heading=data.heading;
 var content=data.content;
 
 var htmlTemplate='

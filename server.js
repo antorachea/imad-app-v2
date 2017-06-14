@@ -9,7 +9,7 @@ var Articles = {
 'artOne': {
     title: 'Article one Anto',
     sar: 'Article one',
-    date: 'Jun 14, 2017',
+    //date: 'Jun 14, 2017',
     content: `  <p>
             Paragraph 1:
             This is the content for my first article. This is the content for my first article. This is the content for my first article

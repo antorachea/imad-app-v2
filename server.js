@@ -110,11 +110,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-});
-app.get('/:artName', function(req,res){
+app.get('/:articleName', function(req,res){
    // artName == article name
-   var artName = req.param.artName;
-   res.send(createTempalate(Articles[artName]));
+   var articleName = req.param.articleName;
+   res.send(createTempalate(Articles[articleName]));
 });
 
 

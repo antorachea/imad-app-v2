@@ -68,7 +68,7 @@ var Articles = {
 }
 };
 function createTempalate(data){
-    var date=data.date;
+ //   var date=data.date;
     var title=data.title;
     var head=data.sar;
     var content=data.content;

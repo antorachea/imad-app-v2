@@ -91,11 +91,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/artName', function (req, res){
-   // artName == article name
-
-   res.send(createTempalate(articleone));
-});
 
 app.get('/artNames', function (req, res){
    // artName == article name

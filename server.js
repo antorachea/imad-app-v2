@@ -117,13 +117,6 @@ app.get('/:articleName', function(req,res){
    var articleName = req.param.articleName;
    res.send(createTempalate(Articles[articleName]));
 });
-app.get('/art-one', function(req,res){
-   res.send(createTempalate(artOne)); 
-});
-
-app.get('/art-three', function(req,res){
-    res.send('third arcile will be served here');    
-});
 
 
 app.get('/ui/style.css', function (req, res) {

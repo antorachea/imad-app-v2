@@ -9,7 +9,7 @@ var Articles = {
 'artOne': {
     title: 'Article one Anto',
     sar: 'Article one',
-    //date: 'Jun 14, 2017',
+    date: 'Jun 14, 2017',
     content: `  <p>
             Paragraph 1:
             This is the content for my first article. This is the content for my first article. This is the content for my first article
@@ -29,7 +29,7 @@ var Articles = {
 'artTwo': {
     title: 'Article two Anto',
     sar: 'Article two',
-  //  date: 'Jun 14, 2017',
+  date: 'Jun 14, 2017',
     content: `  <p>
             Paragraph 1:
             This is the content for my second article. This is the content for my first article. This is the content for my first article
@@ -49,7 +49,7 @@ var Articles = {
 'artThree': {
     title: 'Article 3 Anto',
     sar: 'Article Three',
-   // date: 'Jun 14, 2017',
+   date: 'Jun 14, 2017',
     content: `  <p>
             Paragraph 1:
             This is the content for my third article. This is the content for my first article. This is the content for my first article
@@ -68,7 +68,7 @@ var Articles = {
 }
 };
 function createTempalate(data){
- //   var date=data.date;
+    var date=data.date;
     var title=data.title;
     var head=data.sar;
     var content=data.content;
@@ -90,7 +90,10 @@ var htmlTemp= `
         <h3>
             ${head}
         </h3>
-
+        
+        <div>
+            ${date}
+        </div>
         
         <div>
             ${content}

@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var artOne = {
-    title: 'Artcle one - from server js',
+    title: 'Article one - from server js',
     sar: 'Article one',
     date: 'Jun 14, 2017',
     content: `  <p>

@@ -94,8 +94,8 @@ app.get('/', function (req, res) {
 
 app.get('/:artName', function (req, res){
    // articleName == article name
-var artName=req.params.articleName;
-   res.send(createTempalate(articles[articleName]));
+var artName=req.params.artName;
+   res.send(createTempalate(articles[artName]));
 });
 
 app.get('/ui/style.css', function (req, res) {

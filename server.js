@@ -98,7 +98,7 @@ var htmlTemp= `
     <body>
         <div class='stylecontainer'>
         <div>
-            <a href="/">Home</a>
+            <a href="/">Ghar</a>
         </div>
         <hr/>
         <h3>

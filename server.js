@@ -92,10 +92,10 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/artNames', function (req, res){
-   // artName == article name
-artNames=req.param.artNames
-   res.send(createTempalate(arts[artNames]));
+app.get('/articleName', function (req, res){
+   // articleName == article name
+articleName=req.param.articleName
+   res.send(createTempalate(arts[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {

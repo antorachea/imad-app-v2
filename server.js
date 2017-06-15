@@ -46,7 +46,7 @@ var articles = {
     `
     
 },
-}
+};
 
 function createTempalate(data){
     var date=data.date;

@@ -36,7 +36,7 @@ var arts = {
 },
 'art2': {
     title: 'Article two Anto',
-    sar: 'Article one',
+    sar: 'Article two',
     date: 'Jun 15, 2017',
     content: `  <p>
             Paragraph 1:
@@ -51,9 +51,33 @@ var arts = {
                 Paragraph 3:
                 This is the third paragraph
             </p>
-    `
+    `,
+    MContent: `
+    This is more content on second arciels`,
     
 },
+'art3': {
+    title: 'Article three Anto',
+    sar: 'Article three',
+    date: 'Jun 16, 2017',
+    content: `  <p>
+            Paragraph 1:
+            This is the content for my third article. 
+            </p>
+            
+            <p>
+            Paragraph 2:
+                This isthe second paragraph
+            </p>
+            <p>
+                Paragraph 3:
+                This is the third paragraph
+            </p>
+    `,
+    MContent: `
+    This is more content on third arciels`,
+    
+}
 };
 
 function createTempalate(data){

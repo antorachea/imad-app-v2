@@ -61,7 +61,7 @@ function createTempalate(data){
     var title=data.title;
     var head=data.sar;
     var content=data.content;
-    var moreContent=data.MContent
+    var moreContent=data.MContent;
     
 var htmlTemp= `
 <html>

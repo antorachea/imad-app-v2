@@ -23,6 +23,14 @@ var arts = {
                 Paragraph 3:
                 This is the third paragraph
             </p>
+    `,
+    MContent: `
+    <p>
+    MOre content on first art
+    </p>
+    <p>
+    Hope this works
+    </p>
     `
     
 },
@@ -53,6 +61,7 @@ function createTempalate(data){
     var title=data.title;
     var head=data.sar;
     var content=data.content;
+    var moreContent=data.MContent
     
 var htmlTemp= `
 <html>
@@ -79,6 +88,8 @@ var htmlTemp= `
         <div>
             ${content}
         </div>
+        <div>
+        ${moreContent}
         </div>
     </body>
 </html>

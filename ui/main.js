@@ -6,7 +6,7 @@ var img = document.getElementById('anto');
 var moveleft = 0;
 function moveright(){
 moveleft = moveleft + 10;
-img.style.moveleft = moveleft + 'px';
+img.style.marginLeft = moveleft + 'px';
 }
 img.onclick = function(){
   var int = setInterval(moveright, 100);  

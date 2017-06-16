@@ -3,6 +3,11 @@ ele = document.getElementById('anto-text');
 ele.innerHTML = 'New Value';
 
 var img = document.getElementById('anto');
-img.onclick = function() {
-  img.style.marginLeft = '100px';  
+var moveleft = 0;
+function moveright(){
+moveleft = moveleft + 10;
+img.style.moveleft = moveleft + 'px';
+}
+img.onclick = function(){
+  var int = setInterval(moveright, 100);  
 };

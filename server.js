@@ -132,6 +132,12 @@ counter = counter + 1;
 res.send(counter.toString());
 });
 
+var cnt = 0;
+app.get('/cnt', function(req,res){
+    cnt = cnt + 2;
+    res.send(cnt.toString());
+});
+
 app.get('/:artNs', function (req, res){
    // articleName == article name
 var artNs=req.params.artNs;

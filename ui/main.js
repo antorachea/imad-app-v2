@@ -1,13 +1,9 @@
 console.log('Loaded!');
-ele = document.getElementById('anto-text');
-ele.innerHTML = 'New Value';
-
-var img = document.getElementById('anto');
-var moveleft = 0;
-function moveright(){
-moveleft = moveleft + 2;
-img.style.marginLeft = moveleft + 'px';
-}
-img.onclick = function(){
-  var int = setInterval(moveright, 100);  
+var button = document.getElementById('counter');
+button.onclick = function(){
+  
+  //Render the varialbe in the current span
+  counter = counter + 1;
+  var span = document.getElementById('clicked');
+  span.innerHTML = counter.toString();
 };

@@ -4,5 +4,5 @@ ele.innerHTML = 'New Value';
 
 var img = document.getElementById('anto');
 img.onclick = function() {
-  img.style.margingLeft = '100px';  
+  img.style.marginLeft = '100px';  
 };

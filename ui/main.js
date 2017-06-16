@@ -5,7 +5,7 @@ ele.innerHTML = 'New Value';
 var img = document.getElementById('anto');
 var moveleft = 0;
 function moveright(){
-moveleft = moveleft + 10;
+moveleft = moveleft + 2;
 img.style.marginLeft = moveleft + 'px';
 }
 img.onclick = function(){
